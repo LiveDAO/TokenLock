@@ -25,8 +25,19 @@
 2. 在超过阈值数量的的锁账户同意的情况下，即可更新池账户的权限，加入新的锁账户
 3. 同时在所有锁账户的权重都是1的前提下，更改池账户一个合适的阈值
 
-## 公众验证方法
+## 官方参考资料
 多重签名账户的官方资料请参照下方链接
 - [EOS.IO Technical White Paper v2](https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#evaluating-permissions "EOS.IO Technical White Paper v2")
 
-公众可以到任意EOS主网浏览器上查看三个池账户，示例如下
+## 公众验证方法
+1. 公众可以post数据到主网的任意可信任节点提供的api查看池账户权限
+
+```
+curl --request POST \
+	--url https://eos.greymass.com/v1/chain/get_account \
+	--header 'accept: application/json' \
+	--header 'content-type: application/json' \
+	--data '{"account_name":"livedaogroup"}';
+```
+
+2. 公众可以到任意EOS主网浏览器上查看三个池账户
