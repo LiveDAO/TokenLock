@@ -31,13 +31,85 @@
 
 ## 公众验证方法
 1. 公众可以post数据到主网的任意可信任节点提供的api查看池账户权限
-
 ```
 curl --request POST \
-	--url https://eos.greymass.com/v1/chain/get_account \
-	--header 'accept: application/json' \
-	--header 'content-type: application/json' \
-	--data '{"account_name":"livedaogroup"}';
+    --url https://eos.greymass.com/v1/chain/get_account \
+    --header 'accept: application/json' \
+    --header 'content-type: application/json' \
+    --data '{"account_name":"livedaogroup"}';
 ```
-
+得到数据
+```
+{
+    "account_name": "livedaogroup",
+    ...
+    "permissions": [
+        {
+            "perm_name": "active",
+            "parent": "owner",
+            "required_auth": {
+                "threshold": 2,
+                "keys": [],
+                "accounts": [
+                    {
+                        "permission": {
+                            "actor": "livedaolocka",
+                            "permission": "active"
+                        },
+                        "weight": 1
+                    },
+                    {
+                        "permission": {
+                            "actor": "livedaolockb",
+                            "permission": "active"
+                        },
+                        "weight": 1
+                    },
+                    {
+                        "permission": {
+                            "actor": "livedaolockc",
+                            "permission": "active"
+                        },
+                        "weight": 1
+                    }
+                ],
+                "waits": []
+            }
+        },
+        {
+            "perm_name": "owner",
+            "parent": "",
+            "required_auth": {
+                "threshold": 2,
+                "keys": [],
+                "accounts": [
+                    {
+                        "permission": {
+                            "actor": "livedaolocka",
+                            "permission": "active"
+                        },
+                        "weight": 1
+                    },
+                    {
+                        "permission": {
+                            "actor": "livedaolockb",
+                            "permission": "active"
+                        },
+                        "weight": 1
+                    },
+                    {
+                        "permission": {
+                            "actor": "livedaolockc",
+                            "permission": "active"
+                        },
+                        "weight": 1
+                    }
+                ],
+                "waits": []
+            }
+        }
+    ],
+    ...
+}
+```
 2. 公众可以到任意EOS主网浏览器上查看三个池账户
