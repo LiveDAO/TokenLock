@@ -116,3 +116,17 @@ curl --request POST \
 - [https://eospark.com/account/livedaogroup](https://eospark.com/account/livedaogroup "https://eospark.com/account/livedaogroup")
 
 ![](https://github.com/LiveDAO/TokenLock/blob/master/example.jpg?raw=true)
+
+## 社区LIVE锁定
+创建两个社区锁定账户（社区A和社区B）
+- livecomlocka
+- livecomlockb
+
+从池账户livedaofound中通过多重签名转出LIVE到两个锁定账户，最终余额分配如下
+- livedaofound（200,000,000 LIVE）
+- livecomlocka（100,000,000 LIVE）
+- livecomlockb（100,000,000 LIVE）
+
+请查看EOS主网上这两笔交易的详情
+- [https://eosflare.io/tx/25B8ECC092CF0B3FD6FBBAAF61DCD453F0D7ADFE800223C5818B06C7099993F3](https://eosflare.io/tx/25B8ECC092CF0B3FD6FBBAAF61DCD453F0D7ADFE800223C5818B06C7099993F3 "https://eosflare.io/tx/25B8ECC092CF0B3FD6FBBAAF61DCD453F0D7ADFE800223C5818B06C7099993F3")
+- [https://eosflare.io/tx/0C6EF7C2D2913FD61EDBAE233CB63D51E915FAA7204D6010309D91B970F21A43](https://eosflare.io/tx/0C6EF7C2D2913FD61EDBAE233CB63D51E915FAA7204D6010309D91B970F21A43 "https://eosflare.io/tx/0C6EF7C2D2913FD61EDBAE233CB63D51E915FAA7204D6010309D91B970F21A43")
